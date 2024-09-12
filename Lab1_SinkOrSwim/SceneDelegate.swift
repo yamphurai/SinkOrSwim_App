@@ -1,9 +1,5 @@
-//
-//  SceneDelegate.swift
-//  Lab1_SinkOrSwim
-//
-//  Created by Reshma Shrestha on 9/12/24.
-//
+//Sink or Swim app
+//Team members: Arman, Clifton, Jeevan
 
 import UIKit
 
