@@ -14,6 +14,7 @@
 		06E791CB2C9348C4007A570E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E791CA2C9348C4007A570E /* Assets.xcassets */; };
 		06E791CE2C9348C4007A570E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 06E791CD2C9348C4007A570E /* Base */; };
 		06E791E22C936E3D007A570E /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E791E12C936E3D007A570E /* ImageModel.m */; };
+		06E791E42C937F49007A570E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E791E32C937F49007A570E /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		06E791DF2C936E3D007A570E /* Lab1_SinkOrSwim-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lab1_SinkOrSwim-Bridging-Header.h"; sourceTree = "<group>"; };
 		06E791E02C936E3D007A570E /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		06E791E12C936E3D007A570E /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		06E791E32C937F49007A570E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				06E791C12C9348C2007A570E /* AppDelegate.swift */,
 				06E791C32C9348C2007A570E /* SceneDelegate.swift */,
 				06E791C52C9348C2007A570E /* ViewController.swift */,
+				06E791E32C937F49007A570E /* TableViewController.swift */,
 				06E791E02C936E3D007A570E /* ImageModel.h */,
 				06E791E12C936E3D007A570E /* ImageModel.m */,
 				06E791DF2C936E3D007A570E /* Lab1_SinkOrSwim-Bridging-Header.h */,
@@ -149,6 +152,7 @@
 				06E791C62C9348C2007A570E /* ViewController.swift in Sources */,
 				06E791C22C9348C2007A570E /* AppDelegate.swift in Sources */,
 				06E791C42C9348C2007A570E /* SceneDelegate.swift in Sources */,
+				06E791E42C937F49007A570E /* TableViewController.swift in Sources */,
 				06E791E22C936E3D007A570E /* ImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

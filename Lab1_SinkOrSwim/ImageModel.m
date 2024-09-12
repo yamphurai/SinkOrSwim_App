@@ -15,4 +15,21 @@
     return _sharedInstance;
 }
 
+//overwrite the getter for the image names array
+@synthesize imageNames = _imageNames;
+-(NSArray*) imageNames{
+    if(!_imageNames){
+        _imageNames = @[@"AfricanDaisy", @"AfricanLilly", @"AfricanMarigol", @"AfricanViolet", @"Alpenrose", @"Amaryllls", @"AmericanLotus", @"AmericanWisteria", @"AngelsFishingRod"];
+    }
+    return _imageNames;
+}
+
+//implement "getImageWithName" method
+-(UIImage*)getImageWithName:(NSString*)name{
+    UIImage* image = nil;
+    image = [UIImage imageNamed:name];
+    return image;
+}
+
+
 @end

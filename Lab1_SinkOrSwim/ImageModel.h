@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -13,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 //define the "sharedInstance" class
 +(ImageModel*) sharedInstance;
+
+//method to return image based on the name
+-(UIImage*)getImageWithName:(NSString*)name;
+
+//array of images
+@property (strong, nonatomic) NSArray* imageNames;
 
 @end
 
