@@ -1,4 +1,7 @@
-//Hey.
+//Sink or Swim app
+//Team member: Arman, Clifton, Jeevan
+
+
 import UIKit
 
 class ViewController: UIViewController {
