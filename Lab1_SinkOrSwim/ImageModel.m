@@ -19,7 +19,7 @@
 @synthesize imageNames = _imageNames;
 -(NSArray*) imageNames{
     if(!_imageNames){
-        _imageNames = @[@"AfricanDaisy", @"AfricanLilly", @"AfricanMarigol", @"AfricanViolet", @"Alpenrose", @"Amaryllls", @"AmericanLotus", @"AmericanWisteria", @"AngelsFishingRod"];
+        _imageNames = @[@"AfricanDaisy", @"AfricanLilly", @"AfricanMarigold", @"AfricanViolet", @"Alpenrose", @"Amaryllls", @"AmericanLotus", @"AmericanWisteria", @"AngelsFishingRod"];
     }
     return _imageNames;
 }

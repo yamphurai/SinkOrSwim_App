@@ -12,34 +12,57 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
+    
+    //handle the imageModel
+    lazy var imageModel: ImageModel = {
+        return ImageModel.sharedInstance()
+    }()
 
     // MARK: - Table view data source
 
+    
+    //method for number of sections in the table
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+       
+        return 1
     }
 
+
+    //method for number of rows in the table view
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.imageModel.imageNames.count
     }
+    
 
-    /*
+    
+    //identifier for resuable cell: "ImageNameCell"
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNameCell", for: indexPath)
 
-        // Configure the cell...
+        //display the image name in specific row in table
+        if let name = self.imageModel.imageNames[indexPath.row] as? String {
+            cell.textLabel!.text = name
+        }
 
         return cell
     }
-    */
+
+    //segue from selected row to show specific image
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //if the segue is to our ViewController as destination
+        if let vc = segue.destination as? ViewController,
+           let cell = sender as? UITableViewCell,
+           let name = cell.textLabel?.text {
+            vc.displayImageName = name
+        }
+    }
+    
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
