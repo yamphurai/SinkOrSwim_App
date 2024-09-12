@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ImageModel : NSObject
 
+//define the "sharedInstance" class
++(ImageModel*) sharedInstance;
+
 @end
 
 NS_ASSUME_NONNULL_END
