@@ -22,29 +22,48 @@ class TableViewController: UITableViewController {
     //method for number of sections in the table
     override func numberOfSections(in tableView: UITableView) -> Int {
        
-        return 1
+        return 3
     }
 
 
     //method for number of rows in the table view
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.imageModel.imageNames.count
+        
+        //return number of rows based on the selected cell. If first section, #rows=# of images, otherwise it's 1
+        if section == 0{
+            return self.imageModel.imageNames.count
+        }
+        return 1
     }
     
 
     
     //identifier for resuable cell: "ImageNameCell"
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNameCell", for: indexPath)
-
-        //display the image name in specific row in table
-        if let name = self.imageModel.imageNames[indexPath.row] as? String {
-            cell.textLabel!.text = name
+        
+        //display the image with details once user clicks the cell. if first section is selected
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNameCell", for: indexPath)
+            if let name = self.imageModel.imageNames[indexPath.row] as? String {
+                cell.textLabel!.text = name
+            }
+            return cell
+            
+        //if second cell is selected
+        }else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageDetail", for: indexPath)
+            cell.textLabel?.text = "All Images"
+            cell.detailTextLabel?.text = "Details"
+            return cell
+        
+        //if third cell is selected
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageBySeason", for: indexPath)
+            cell.textLabel?.text = "Flower by season"
+            return cell
         }
-
-        return cell
     }
+    
 
     //segue from selected row to show specific image
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
