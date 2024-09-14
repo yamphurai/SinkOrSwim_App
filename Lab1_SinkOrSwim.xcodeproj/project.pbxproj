@@ -14,7 +14,15 @@
 		06E791CB2C9348C4007A570E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E791CA2C9348C4007A570E /* Assets.xcassets */; };
 		06E791CE2C9348C4007A570E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 06E791CD2C9348C4007A570E /* Base */; };
 		06E791E22C936E3D007A570E /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E791E12C936E3D007A570E /* ImageModel.m */; };
-		06E791E42C937F49007A570E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E791E32C937F49007A570E /* TableViewController.swift */; };
+		495B77382C9547BC00A3924E /* FlowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B77372C9547BC00A3924E /* FlowerModel.swift */; };
+		495B773A2C9547E200A3924E /* FlowerImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B77392C9547E200A3924E /* FlowerImageModel.swift */; };
+		495B773C2C95633500A3924E /* FlowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B773B2C95633500A3924E /* FlowerListViewController.swift */; };
+		495B77442C957A2C00A3924E /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B77432C957A2C00A3924E /* PickerTableViewCell.swift */; };
+		495B77462C9587EC00A3924E /* SlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B77452C9587EC00A3924E /* SlideShowViewController.swift */; };
+		495B77482C958B6600A3924E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B77472C958B6600A3924E /* GalleryViewController.swift */; };
+		495B774A2C958DF000A3924E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B77492C958DF000A3924E /* ImageCollectionViewCell.swift */; };
+		495B774C2C9612F800A3924E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B774B2C9612F800A3924E /* LaunchViewController.swift */; };
+		495B774E2C962C4100A3924E /* FlowerTypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B774D2C962C4100A3924E /* FlowerTypeListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +37,15 @@
 		06E791DF2C936E3D007A570E /* Lab1_SinkOrSwim-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lab1_SinkOrSwim-Bridging-Header.h"; sourceTree = "<group>"; };
 		06E791E02C936E3D007A570E /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		06E791E12C936E3D007A570E /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
-		06E791E32C937F49007A570E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		495B77372C9547BC00A3924E /* FlowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerModel.swift; sourceTree = "<group>"; };
+		495B77392C9547E200A3924E /* FlowerImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerImageModel.swift; sourceTree = "<group>"; };
+		495B773B2C95633500A3924E /* FlowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerListViewController.swift; sourceTree = "<group>"; };
+		495B77432C957A2C00A3924E /* PickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
+		495B77452C9587EC00A3924E /* SlideShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShowViewController.swift; sourceTree = "<group>"; };
+		495B77472C958B6600A3924E /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		495B77492C958DF000A3924E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		495B774B2C9612F800A3924E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		495B774D2C962C4100A3924E /* FlowerTypeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerTypeListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +81,6 @@
 				06E791C12C9348C2007A570E /* AppDelegate.swift */,
 				06E791C32C9348C2007A570E /* SceneDelegate.swift */,
 				06E791C52C9348C2007A570E /* ViewController.swift */,
-				06E791E32C937F49007A570E /* TableViewController.swift */,
 				06E791E02C936E3D007A570E /* ImageModel.h */,
 				06E791E12C936E3D007A570E /* ImageModel.m */,
 				06E791DF2C936E3D007A570E /* Lab1_SinkOrSwim-Bridging-Header.h */,
@@ -73,6 +88,15 @@
 				06E791CA2C9348C4007A570E /* Assets.xcassets */,
 				06E791CC2C9348C4007A570E /* LaunchScreen.storyboard */,
 				06E791CF2C9348C4007A570E /* Info.plist */,
+				495B77372C9547BC00A3924E /* FlowerModel.swift */,
+				495B77392C9547E200A3924E /* FlowerImageModel.swift */,
+				495B773B2C95633500A3924E /* FlowerListViewController.swift */,
+				495B77432C957A2C00A3924E /* PickerTableViewCell.swift */,
+				495B77452C9587EC00A3924E /* SlideShowViewController.swift */,
+				495B77472C958B6600A3924E /* GalleryViewController.swift */,
+				495B77492C958DF000A3924E /* ImageCollectionViewCell.swift */,
+				495B774B2C9612F800A3924E /* LaunchViewController.swift */,
+				495B774D2C962C4100A3924E /* FlowerTypeListViewController.swift */,
 			);
 			path = Lab1_SinkOrSwim;
 			sourceTree = "<group>";
@@ -150,9 +174,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				06E791C62C9348C2007A570E /* ViewController.swift in Sources */,
+				495B77462C9587EC00A3924E /* SlideShowViewController.swift in Sources */,
+				495B774A2C958DF000A3924E /* ImageCollectionViewCell.swift in Sources */,
+				495B77442C957A2C00A3924E /* PickerTableViewCell.swift in Sources */,
 				06E791C22C9348C2007A570E /* AppDelegate.swift in Sources */,
+				495B774C2C9612F800A3924E /* LaunchViewController.swift in Sources */,
 				06E791C42C9348C2007A570E /* SceneDelegate.swift in Sources */,
-				06E791E42C937F49007A570E /* TableViewController.swift in Sources */,
+				495B773C2C95633500A3924E /* FlowerListViewController.swift in Sources */,
+				495B774E2C962C4100A3924E /* FlowerTypeListViewController.swift in Sources */,
+				495B77382C9547BC00A3924E /* FlowerModel.swift in Sources */,
+				495B77482C958B6600A3924E /* GalleryViewController.swift in Sources */,
+				495B773A2C9547E200A3924E /* FlowerImageModel.swift in Sources */,
 				06E791E22C936E3D007A570E /* ImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
