@@ -5,28 +5,26 @@
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
+    @IBOutlet weak var scrollView: UIScrollView!
     
-    //lazily instantiate the "imageModel"
-    lazy var imageModel = {
-        return ImageModel.sharedInstance()
+    // Name Of Image TO Display
+    var displayImageName = ""
+    
+    // Model Shared Instance
+    lazy private var flowerImageModel = {
+        return FlowerImageModel.instance
     }()
     
     //instantiate "imageView" that return UIImageView
     lazy private var imageView: UIImageView? = {
         
         //display the image based on the name
-        return UIImageView.init(image: self.imageModel.getImageWithName(displayImageName))
+        return UIImageView.init(image: self.flowerImageModel.getFlowerByName(name: displayImageName)?.image)
     }()
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    var displayImageName = "AfricanMarigold"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+       
         //set the size of the scroll = size of the image
         if let size = self.imageView?.image?.size{
             self.scrollView.addSubview(self.imageView!)  //add imageView as a subset of scroll view
