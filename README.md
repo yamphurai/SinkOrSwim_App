@@ -10,23 +10,23 @@ Rubric Details:
   - When loading a new view controller your main view controller should hand off information to the controller that is getting created.
 
 The application should make use of the following design elements in one or more of the views:
-  1. Automatic Layout
-  2. Buttons, Sliders, and Labels
+  1. Automatic Layout (done)
+  2. Buttons, Sliders, and Labels (done)
   3. Stepper and Switch
-  4. Picker (you must implement picker delegate)
-  5. Segmented Control
-  6. Timer (which should repeat and somehow update the UIView)
-  7. ScrollView (with scrollable, zoomable content)
-  8. Image View
-  9. Navigation Controller
-  10. Collection View Controller
-  11. Table View Controller with three different dynamic prototype cells
-  12. The design should work in both portrait and landscape mode
+  4. Picker (you must implement picker delegate) (done)
+  5. Segmented Control (done: Options for selecting a type of flower to display)
+  6. Timer (which should repeat and somehow update the UIView) (done)
+  7. ScrollView (with scrollable, zoomable content) (done)
+  8. Image View (done)
+  9. Navigation Controller (done)
+  10. Collection View Controller (done)
+  11. Table View Controller with three different dynamic prototype cells (done)
+  12. The design should work in both portrait and landscape mode (done)
   13. I should not be able to crash your app
   14. Your design must strictly adhere to Model View Controller programming practices. Use lazy instantiation when possible
 
 
-Exceptional Credit: Implement a modal view and handle properly using custom protocols/delegation
+Exceptional Credit: Implement a modal view and handle properly using custom protocols/delegation (done)
 
 ** Test your app running on the device, not the emulator to ensure it runs in all scenarios **
 
