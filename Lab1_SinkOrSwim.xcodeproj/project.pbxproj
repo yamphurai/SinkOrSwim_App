@@ -23,6 +23,7 @@
 		495B774A2C958DF000A3924E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B77492C958DF000A3924E /* ImageCollectionViewCell.swift */; };
 		495B774C2C9612F800A3924E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B774B2C9612F800A3924E /* LaunchViewController.swift */; };
 		495B774E2C962C4100A3924E /* FlowerTypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B774D2C962C4100A3924E /* FlowerTypeListViewController.swift */; };
+		495B77502C9D468700A3924E /* GalleryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B774F2C9D468700A3924E /* GalleryFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		495B77492C958DF000A3924E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		495B774B2C9612F800A3924E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		495B774D2C962C4100A3924E /* FlowerTypeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerTypeListViewController.swift; sourceTree = "<group>"; };
+		495B774F2C9D468700A3924E /* GalleryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				495B77492C958DF000A3924E /* ImageCollectionViewCell.swift */,
 				495B774B2C9612F800A3924E /* LaunchViewController.swift */,
 				495B774D2C962C4100A3924E /* FlowerTypeListViewController.swift */,
+				495B774F2C9D468700A3924E /* GalleryFilterViewController.swift */,
 			);
 			path = Lab1_SinkOrSwim;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				495B77482C958B6600A3924E /* GalleryViewController.swift in Sources */,
 				495B773A2C9547E200A3924E /* FlowerImageModel.swift in Sources */,
 				06E791E22C936E3D007A570E /* ImageModel.m in Sources */,
+				495B77502C9D468700A3924E /* GalleryFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

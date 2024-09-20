@@ -123,17 +123,6 @@ class FlowerImageModel {
         }
     }
     
-    /*
-    func getFlowerByName(name: String) -> FlowerModel? {
-        if let flower = self.flowers.first(where:  { $0.name == name })  {
-            return flower
-        }
-        else {
-            fatalError("Cannot Find Image For Name: \(name)")
-        }
-   }
-     */
-    
     // Return Random Flower
     func getRandomFlower() -> FlowerModel? {
         let randomNumber = Int.random(in: 0...(self.flowers.count - 1))

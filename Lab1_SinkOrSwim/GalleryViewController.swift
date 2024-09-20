@@ -1,9 +1,8 @@
 import UIKit
 
-class GalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class GalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FilterDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var columnSlider: UISlider!
     
     // Filter Value
     var filter = "All"
@@ -17,15 +16,10 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     private var filteredFlowers: [FlowerModel] = []
     
     // Default number of columns
-    var numberOfColumns: Int = 1
+    var numberOfColumns: Int = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set Up Slider
-        columnSlider.minimumValue = 1
-        columnSlider.maximumValue = 2
-        columnSlider.value = 1
         
         // Set Up Collection
         collectionView.dataSource = self
@@ -61,12 +55,34 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         return CGSize(width: itemWidth, height: itemWidth)
     }
     
-    // Slider Methods
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
-        numberOfColumns = Int(sender.value)
+    // Function To Display Filter
+    @IBAction func filterButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let filter = storyboard.instantiateViewController(withIdentifier: "GalleryFilterViewController") as? GalleryFilterViewController {
+            filter.delegate = self
+            present(filter, animated: true, completion: nil)
+        }
+    }
     
-        collectionView.collectionViewLayout.invalidateLayout()
+    // Delegate Method
+    func didFilter(category: String?) {
+        if let selectedCategory = category {
+            filterGallery(category: selectedCategory)
+        }
+     }
+    
+    // Filter Gallery Based OnSelect
+    func filterGallery(category : String) {
+     
+        if category == "All" {
+            filteredFlowers = FlowerImageModel.instance.getFlowers()
+        } else {
+            filteredFlowers = FlowerImageModel.instance.getFlowers(forType:category)
+        }
+        
+        // Reload the table view to show filtered results
         collectionView.reloadData()
     }
 }
+
 
