@@ -12,37 +12,39 @@ class FlowerImageModel {
     
     // Private List Of Static Values (i.e. static list of flowers). Used In Lieu Of Database.
     private lazy var flowers: [FlowerModel] = {
-        return [
-            FlowerModel(name: "Daisy 1", type: "Daisy", image: loadImage(named: "Daisy_1")),
-            FlowerModel(name: "Daisy 2", type: "Daisy", image: loadImage(named: "Daisy_2")),
-            FlowerModel(name: "Daisy 3", type: "Daisy", image: loadImage(named: "Daisy_3")),
-            FlowerModel(name: "Daisy 4", type: "Daisy", image: loadImage(named: "Daisy_4")),
-            FlowerModel(name: "Daisy 5", type: "Daisy", image: loadImage(named: "Daisy_5")),
-            
-            FlowerModel(name: "Dandelion 1", type: "Dandelion", image: loadImage(named: "Dandelion_1")),
-            FlowerModel(name: "Dandelion 2", type: "Dandelion", image: loadImage(named: "Dandelion_2")),
-            FlowerModel(name: "Dandelion 3", type: "Dandelion", image: loadImage(named: "Dandelion_3")),
-            FlowerModel(name: "Dandelion 4", type: "Dandelion", image: loadImage(named: "Dandelion_4")),
-            FlowerModel(name: "Dandelion 5", type: "Dandelion", image: loadImage(named: "Dandelion_5")),
-            
-            FlowerModel(name: "Rose 1", type: "Rose", image: loadImage(named: "Rose_1")),
-            FlowerModel(name: "Rose 2", type: "Rose", image: loadImage(named: "Rose_2")),
-            FlowerModel(name: "Rose 3", type: "Rose", image: loadImage(named: "Rose_3")),
-            FlowerModel(name: "Rose 4", type: "Rose", image: loadImage(named: "Rose_4")),
-            FlowerModel(name: "Rose 5", type: "Rose", image: loadImage(named: "Rose_5")),
-            
-            FlowerModel(name: "Sunflower 1", type: "Sunflower", image: loadImage(named: "Sunflower_1")),
-            FlowerModel(name: "Sunflower 2", type: "Sunflower", image: loadImage(named: "Sunflower_2")),
-            FlowerModel(name: "Sunflower 3", type: "Sunflower", image: loadImage(named: "Sunflower_3")),
-            FlowerModel(name: "Sunflower 4", type: "Sunflower", image: loadImage(named: "Sunflower_4")),
-            FlowerModel(name: "Sunflower 5", type: "Sunflower", image: loadImage(named: "Sunflower_5")),
-            
-            FlowerModel(name: "Tulip 1", type: "Tulip", image: loadImage(named: "Tulip_1")),
-            FlowerModel(name: "Tulip 2", type: "Tulip", image: loadImage(named: "Tulip_2")),
-            FlowerModel(name: "Tulip 3", type: "Tulip", image: loadImage(named: "Tulip_3")),
-            FlowerModel(name: "Tulip 4", type: "Tulip", image: loadImage(named: "Tulip_4")),
-            FlowerModel(name: "Tulip 5", type: "Tulip", image: loadImage(named: "Tulip_5"))
-        ]
+        var flowersList = [FlowerModel]()
+        
+        flowersList.append(FlowerModel(name: "Daisy 1", type: "Daisy", image: loadImage(named: "Daisy_1")))
+        flowersList.append(FlowerModel(name: "Daisy 2", type: "Daisy", image: loadImage(named: "Daisy_2")))
+        flowersList.append(FlowerModel(name: "Daisy 3", type: "Daisy", image: loadImage(named: "Daisy_3")))
+        flowersList.append(FlowerModel(name: "Daisy 4", type: "Daisy", image: loadImage(named: "Daisy_4")))
+        flowersList.append(FlowerModel(name: "Daisy 5", type: "Daisy", image: loadImage(named: "Daisy_5")))
+
+        flowersList.append(FlowerModel(name: "Dandelion 1", type: "Dandelion", image: loadImage(named: "Dandelion_1")))
+        flowersList.append(FlowerModel(name: "Dandelion 2", type: "Dandelion", image: loadImage(named: "Dandelion_2")))
+        flowersList.append(FlowerModel(name: "Dandelion 3", type: "Dandelion", image: loadImage(named: "Dandelion_3")))
+        flowersList.append(FlowerModel(name: "Dandelion 4", type: "Dandelion", image: loadImage(named: "Dandelion_4")))
+        flowersList.append(FlowerModel(name: "Dandelion 5", type: "Dandelion", image: loadImage(named: "Dandelion_5")))
+
+        flowersList.append(FlowerModel(name: "Rose 1", type: "Rose", image: loadImage(named: "Rose_1")))
+        flowersList.append(FlowerModel(name: "Rose 2", type: "Rose", image: loadImage(named: "Rose_2")))
+        flowersList.append(FlowerModel(name: "Rose 3", type: "Rose", image: loadImage(named: "Rose_3")))
+        flowersList.append(FlowerModel(name: "Rose 4", type: "Rose", image: loadImage(named: "Rose_4")))
+        flowersList.append(FlowerModel(name: "Rose 5", type: "Rose", image: loadImage(named: "Rose_5")))
+
+        flowersList.append(FlowerModel(name: "Sunflower 1", type: "Sunflower", image: loadImage(named: "Sunflower_1")))
+        flowersList.append(FlowerModel(name: "Sunflower 2", type: "Sunflower", image: loadImage(named: "Sunflower_2")))
+        flowersList.append(FlowerModel(name: "Sunflower 3", type: "Sunflower", image: loadImage(named: "Sunflower_3")))
+        flowersList.append(FlowerModel(name: "Sunflower 4", type: "Sunflower", image: loadImage(named: "Sunflower_4")))
+        flowersList.append(FlowerModel(name: "Sunflower 5", type: "Sunflower", image: loadImage(named: "Sunflower_5")))
+
+        flowersList.append(FlowerModel(name: "Tulip 1", type: "Tulip", image: loadImage(named: "Tulip_1")))
+        flowersList.append(FlowerModel(name: "Tulip 2", type: "Tulip", image: loadImage(named: "Tulip_2")))
+        flowersList.append(FlowerModel(name: "Tulip 3", type: "Tulip", image: loadImage(named: "Tulip_3")))
+        flowersList.append(FlowerModel(name: "Tulip 4", type: "Tulip", image: loadImage(named: "Tulip_4")))
+        flowersList.append(FlowerModel(name: "Tulip 5", type: "Tulip", image: loadImage(named: "Tulip_5")))
+                           
+        return flowersList
     }()
     
     // Private List Of Static Flower Type Values. Used In Lieu Of Database.
