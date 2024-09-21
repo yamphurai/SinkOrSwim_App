@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" translatesAutoresizingMaskIntoConstraints="NO" id="VNl-AI-jGf" customClass="ImageCollectionViewCell" customModule="Lab1_SinkOrSwim" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="ImageCell" translatesAutoresizingMaskIntoConstraints="NO" id="VNl-AI-jGf" customClass="ImageCollectionViewCell" customModule="Lab1_SinkOrSwim" customModuleProvider="target">
                                         <rect key="frame" x="88.666666666666671" y="0.0" width="184" height="201"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="htx-T1-mHM">
@@ -325,7 +325,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flower Power!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJc-Hd-LUY">
-                                <rect key="frame" x="96.666666666666671" y="50" width="199.66666666666663" height="39.666666666666657"/>
+                                <rect key="frame" x="96.666666666666686" y="50" width="199.66666666666663" height="39.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -414,11 +414,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVT-OW-Uyc">
-                                <rect key="frame" x="16" y="113" width="361" height="339"/>
-                                <variation key="heightClass=compact-widthClass=compact" layoutMarginsFollowReadableWidth="NO"/>
+                                <rect key="frame" x="16" y="113" width="361" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Fjq-Pn-s6i"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fjq-Pn-s6i"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" layoutMarginsFollowReadableWidth="NO">
+                                    <mask key="constraints">
+                                        <include reference="Fjq-Pn-s6i"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX0-tU-EIb">
-                                <rect key="frame" x="16" y="462" width="361" height="20"/>
+                                <rect key="frame" x="16" y="373" width="361" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Evf-3F-15G"/>
                                 </constraints>
@@ -427,7 +439,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-M5-AaU">
-                                <rect key="frame" x="127" y="492" width="139" height="35"/>
+                                <rect key="frame" x="16" y="401" width="361" height="35"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8QP-jW-EQe">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="35"/>
@@ -438,9 +450,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sfX-hG-hzb">
+                                        <rect key="frame" x="147" y="0.0" width="214" height="36"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="T3W-hG-4VS" eventType="valueChanged" id="6oy-us-0G7"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="0jE-LZ-Ttu"/>
+                                    <constraint firstAttribute="trailing" secondItem="sfX-hG-hzb" secondAttribute="trailing" constant="5" id="9uE-bQ-uUn"/>
                                     <constraint firstItem="8QP-jW-EQe" firstAttribute="centerY" secondItem="fXO-M5-AaU" secondAttribute="centerY" id="bii-x6-BdL"/>
                                     <constraint firstItem="wOm-f9-o5U" firstAttribute="centerY" secondItem="fXO-M5-AaU" secondAttribute="centerY" id="oPX-uf-07e"/>
                                 </constraints>
@@ -452,8 +475,10 @@
                             <constraint firstItem="fXO-M5-AaU" firstAttribute="top" secondItem="iX0-tU-EIb" secondAttribute="bottom" constant="10" id="7lU-Xr-SNS"/>
                             <constraint firstItem="iX0-tU-EIb" firstAttribute="top" secondItem="GVT-OW-Uyc" secondAttribute="bottom" constant="10" id="9EP-hz-NIF"/>
                             <constraint firstItem="iX0-tU-EIb" firstAttribute="leading" secondItem="tIv-Pw-3R7" secondAttribute="leading" constant="16" id="Dqf-zb-Xr9"/>
-                            <constraint firstItem="fXO-M5-AaU" firstAttribute="centerX" secondItem="sRM-ED-NJU" secondAttribute="centerX" id="Ruh-0A-7wp"/>
+                            <constraint firstItem="fXO-M5-AaU" firstAttribute="centerX" secondItem="sRM-ED-NJU" secondAttribute="centerX" id="HTK-to-hzt"/>
                             <constraint firstItem="GVT-OW-Uyc" firstAttribute="top" secondItem="tIv-Pw-3R7" secondAttribute="top" constant="10" id="YF3-3t-QQh"/>
+                            <constraint firstItem="fXO-M5-AaU" firstAttribute="leading" secondItem="tIv-Pw-3R7" secondAttribute="leading" constant="16" id="iBX-vv-yHK"/>
+                            <constraint firstItem="tIv-Pw-3R7" firstAttribute="trailing" secondItem="fXO-M5-AaU" secondAttribute="trailing" constant="16" id="pen-i6-BAa"/>
                             <constraint firstItem="GVT-OW-Uyc" firstAttribute="centerX" secondItem="sRM-ED-NJU" secondAttribute="centerX" id="twx-CH-Pd7"/>
                             <constraint firstItem="tIv-Pw-3R7" firstAttribute="trailing" secondItem="iX0-tU-EIb" secondAttribute="trailing" constant="16" id="y4y-zS-ej2"/>
                         </constraints>
@@ -462,6 +487,7 @@
                     <connections>
                         <outlet property="flowerNameLabel" destination="iX0-tU-EIb" id="as2-NU-0uK"/>
                         <outlet property="imageView" destination="GVT-OW-Uyc" id="VgX-nE-POe"/>
+                        <outlet property="segmentedControl" destination="sfX-hG-hzb" id="DO5-s1-fwd"/>
                         <outlet property="slideshowSwitch" destination="8QP-jW-EQe" id="9iO-lw-vyL"/>
                         <outlet property="switchLabel" destination="wOm-f9-o5U" id="9X8-02-WZF"/>
                     </connections>

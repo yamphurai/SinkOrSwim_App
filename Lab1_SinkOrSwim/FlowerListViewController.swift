@@ -36,6 +36,7 @@ class FlowerListViewController: UITableViewController, UIPickerViewDelegate, UIP
                 // Set the picker view delegate and data source
                 cell.pickerView.delegate = self
                 cell.pickerView.dataSource = self
+
                 return cell
             } else {
                 // Return an empty cell or handle the error
@@ -49,6 +50,14 @@ class FlowerListViewController: UITableViewController, UIPickerViewDelegate, UIP
             }
             return cell
         }
+    }
+    
+    // Custom Set The Height Of The Picker - Row 1
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 75.0
+        }
+        return UITableView.automaticDimension // StoryBoard Value
     }
     
     //Seque Methods

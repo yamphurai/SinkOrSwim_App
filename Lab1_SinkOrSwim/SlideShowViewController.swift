@@ -11,12 +11,17 @@ class SlideShowViewController: UIViewController {
     
     @IBOutlet weak var switchLabel: UILabel!
     @IBOutlet weak var slideshowSwitch: UISwitch!
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
 
     // Array of images for the slideshow
     var flowerImages = [FlowerModel]()
     
     // Timer for the slideshow
     var slideshowTimer: Timer?
+    
+    // Timer Interval
+    var timerInterval: Double = 2.0
     
     //array to keep track of displayed images
     var shownImages = [Int]()
@@ -25,6 +30,12 @@ class SlideShowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         flowerImages = FlowerImageModel.instance.getFlowers()
+        
+        // Add Speeds To Segmented Control
+        segmentedControl.removeAllSegments()
+        segmentedControl.insertSegment(withTitle: "1x", at: 0, animated: false)
+        segmentedControl.insertSegment(withTitle: "2x", at: 1, animated: false)
+        segmentedControl.insertSegment(withTitle: "5x", at: 2, animated: false)
             
         // Initialize the list of shown indices
         shownImages.removeAll()
@@ -36,12 +47,17 @@ class SlideShowViewController: UIViewController {
         slideshowSwitch.addTarget(self, action: #selector(toggleSlideshow), for: .valueChanged)
         
         // Start the slideshow
-        startSlideshow()
+        startSlideshow(interval: timerInterval)
     }
   
-    func startSlideshow() {
-        // Set up the timer to change the image every 2 seconds
-        slideshowTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(showNextImage), userInfo: nil, repeats: true)
+    // Start Slide Show Using Interval
+    func startSlideshow(interval: Double) {
+        // Reset If Activce
+        if slideshowTimer != nil {
+            slideshowTimer?.invalidate()
+            slideshowTimer = nil
+        }
+        slideshowTimer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(showNextImage), userInfo: nil, repeats: true)
         switchLabel.text = "Stop Show"
     }
     
@@ -101,10 +117,28 @@ class SlideShowViewController: UIViewController {
     // Turn Slide Show On And Off
     @objc func toggleSlideshow(_ sender: UISwitch) {
         if sender.isOn {
-            startSlideshow()
+            startSlideshow(interval: timerInterval)
         } else {
             stopSlideshow()
         }
+    }
+    
+    // Change Timer Speed
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        let selectedSegmentIndex = sender.selectedSegmentIndex
+
+        switch selectedSegmentIndex {
+        case 0: //1x
+            timerInterval = 2
+        case 1: //2x
+            timerInterval = 1
+        case 2: //5x
+            timerInterval = 0.5
+        default:
+            timerInterval = 2
+        }
+        
+        startSlideshow(interval: timerInterval)
     }
     
     // Stop the timer when the view disappears
