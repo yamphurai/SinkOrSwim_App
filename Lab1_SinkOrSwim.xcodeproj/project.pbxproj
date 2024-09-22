@@ -24,6 +24,7 @@
 		495B774E2C962C4100A3924E /* FlowerTypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B774D2C962C4100A3924E /* FlowerTypeListViewController.swift */; };
 		495B77502C9D468700A3924E /* GalleryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B774F2C9D468700A3924E /* GalleryFilterViewController.swift */; };
 		495B77522C9F31AC00A3924E /* FlowerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B77512C9F31AC00A3924E /* FlowerModel.m */; };
+		D71A3F352CA016FE00F70538 /* StepperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A3F342CA016FE00F70538 /* StepperController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		495B77512C9F31AC00A3924E /* FlowerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowerModel.m; sourceTree = "<group>"; };
 		495B77532C9F31DD00A3924E /* FlowerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowerModel.h; sourceTree = "<group>"; };
 		495B77542C9F326700A3924E /* Lab1_SinkOrSwim-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lab1_SinkOrSwim-Bridging-Header.h"; sourceTree = "<group>"; };
+		D71A3F342CA016FE00F70538 /* StepperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				495B77512C9F31AC00A3924E /* FlowerModel.m */,
 				495B77532C9F31DD00A3924E /* FlowerModel.h */,
 				495B77542C9F326700A3924E /* Lab1_SinkOrSwim-Bridging-Header.h */,
+				D71A3F342CA016FE00F70538 /* StepperController.swift */,
 			);
 			path = Lab1_SinkOrSwim;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				495B774C2C9612F800A3924E /* LaunchViewController.swift in Sources */,
 				495B77522C9F31AC00A3924E /* FlowerModel.m in Sources */,
 				06E791C42C9348C2007A570E /* SceneDelegate.swift in Sources */,
+				D71A3F352CA016FE00F70538 /* StepperController.swift in Sources */,
 				495B773C2C95633500A3924E /* FlowerListViewController.swift in Sources */,
 				495B774E2C962C4100A3924E /* FlowerTypeListViewController.swift in Sources */,
 				495B77382C9547BC00A3924E /* FlowerModel.swift in Sources */,
