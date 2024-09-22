@@ -48,6 +48,7 @@ class GalleryFilterViewController: UITableViewController {
     // Add Click Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var rowCount = tableView.numberOfRows(inSection: 0)
+        rowCount = rowCount - 1
         if !(indexPath.row == 0 || indexPath.row == rowCount) {
             var index = indexPath.row - 1
             let selectedCategory = flowerTypes[index]
